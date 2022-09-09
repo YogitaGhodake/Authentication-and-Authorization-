@@ -146,7 +146,7 @@ const Login = () => {
   const setStepTracker2Reg = () => {
     setstepTracker2(2);
     console.log("stepTracker2 ==> 157", stepTracker2)
-    alert(stepTracker2);
+    // alert(stepTracker2);
   }
 
 
