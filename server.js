@@ -25,7 +25,7 @@ const db = mysql.createConnection({
     database: "LoginSystem",
 });
 
-app.post('/register', (req, res) => {
+app.post('/api/register', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
@@ -44,7 +44,7 @@ app.post('/register', (req, res) => {
 });
 
 
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
 
     const username = req.body.username;
     const password = req.body.password;
@@ -74,7 +74,7 @@ app.post('/login', (req, res) => {
 
 
 
-app.get('/allUsers', (req, res) => {
+app.get('/api/allUsers', (req, res) => {
 
     try {
         const token = req.headers["x-access-token"] || req.headers["authorization"];
@@ -93,12 +93,7 @@ app.get('/allUsers', (req, res) => {
                 res.send({ result});
              
             }
-
         )
-           
-            
-        
-
     } catch {
         res.send({ message: "Invalid token."})
     }
