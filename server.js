@@ -100,10 +100,15 @@ app.get('/api/allUsers', (req, res) => {
    
 });
 
+app.get('/api/test', (req, res) => {
 
-
-
-
+    try {
+        res.send({ message: "Testing done"})
+    } catch {
+        res.send({ message: "Invalid token."})
+    }
+   
+});
 app.listen(3001, () => {
     console.log("running server...connected to mysql");
 });
