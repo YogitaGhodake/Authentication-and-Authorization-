@@ -22,7 +22,7 @@ const Registration = (props) => {
       }).then((response) => {
         console.log(response, "response-20");
 
-        if (response.data.success) {
+        if (response.data.message) {
           alert("User Registered successfully");
           props.onSuccess(props);
         } else {
